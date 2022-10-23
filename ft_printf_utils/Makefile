@@ -2,7 +2,7 @@ NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
-SRC = ft_format.c ft_itoa_base.c ft_printf.c string_utils.c $(wildcard ./libft/*)
+SRC = printf_utils.c string_utils.c $(wildcard ft*.c) $(wildcard ./libft/*)
 OBJ = $(SRC:.c=.o)
 OBJ = $(SRC:.c=.o)
 

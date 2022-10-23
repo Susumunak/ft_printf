@@ -6,8 +6,6 @@
 int	main()
 {	
 
-	printf("[%d]",ft_printf("%p", LONG_MIN + 1));
-	printf("\n%ld\n", LONG_MIN);
-	printf("==> [%d]",printf("%p", LONG_MIN + 1));
-	printf("\n%ld", LONG_MIN);
+ft_printf("%x");
+	
 }

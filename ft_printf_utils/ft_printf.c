@@ -6,7 +6,7 @@
 /*   By: del-khay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 23:10:07 by del-khay          #+#    #+#             */
-/*   Updated: 2022/10/23 00:11:49 by del-khay         ###   ########.fr       */
+/*   Updated: 2022/10/23 02:15:31 by del-khay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,13 @@ int	ft_printf(const char *s, ...)
 	while (s && s[i])
 	{
 		if (s[i] == '%' && ft_isformat(s[i + 1]))
-		{
 			n += ft_format(s[++i], args);
-			i++;
-		}
-		else
+		else if (s[i] != '%')
 		{
 			ft_putchar_fd(s[i], 1);
 			n++;
-			i++;
 		}
+		i++;
 	}
 	va_end(args);
 	return (n);
